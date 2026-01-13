@@ -7,3 +7,14 @@
     - npx prisma migrate
     - npm run build
     - npm run start
+
+## Docker installation 
+    - install docker
+    - start postgres container
+    - build the image
+    - start the image
+    - connect postgres and nodejs process through a netwrok
+
+
+## Docker installation (not just docker but docker compose)
+    - 
