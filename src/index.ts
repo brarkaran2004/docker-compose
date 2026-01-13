@@ -29,3 +29,5 @@ app.post("/",async (req,res) => {
     })
     
 })
+
+app.listen(3000)

@@ -10,11 +10,12 @@
 
 ## Docker installation 
     - install docker
-    - start postgres container
-    - build the image
-    - start the image
-    - connect postgres and nodejs process through a netwrok
-
-
+    - create a network for communication between backend and postgres
+    - start postgres container and set its network to created network
+    - build the image (with build steps in script set --network=host so npx primsa migrate dev can run )
+    - start the image (with --network set to your created network)
+    - this gets more complex as microservices increase
+    
 ## Docker installation (not just docker but docker compose)
-    - 
+    - install docker ,docker compose
+    - run `docker-compose up` or `docker compose watch
