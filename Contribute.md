@@ -18,4 +18,4 @@
     
 ## Docker installation (not just docker but docker compose)
     - install docker ,docker compose
-    - run `docker-compose up` or `docker compose watch
+    - run `docker-compose up` 
