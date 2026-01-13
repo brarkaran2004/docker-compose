@@ -1,6 +1,5 @@
 FROM node:20-alpine
 
-ARG DATABASE_URL
 WORKDIR /app
 
 COPY ./package.json ./package.json
@@ -10,12 +9,9 @@ RUN npm install
 
 COPY . .
 
-ENV DATABASE_URL=$DATABASE_URL
+# ENV DATABASE_URL="postgresql://postgres:mypass@localhost:5432/postgres" 
 
-RUN npx prisma migrate dev
-RUN npx prisma generate
-RUN npm run build
 
 EXPOSE 3000
 
-CMD ["npm","run","dev"]
+CMD ["sh", "-c", "npx prisma migrate dev && npx prisma generate && npm run dev"]
